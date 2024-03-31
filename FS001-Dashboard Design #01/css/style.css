@@ -233,7 +233,7 @@ main .analytics .item .progress .info h5{
     font-weight: bold;
 }
 
-main .analytics .item .progress p{
+main .analytics .item .progress .info p{
     color: #fff;
     font-size: 12px;
 }
@@ -397,4 +397,241 @@ main .planning .item .left .details p{
 
 main .planning .item > i{
     cursor: pointer;
+}
+
+.container .right-section{
+    padding: 40px 40px 0 40px;
+}
+
+.container .right-section .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .right-section .top > i{
+    color: #909090;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .right-section .top > i::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: #EB5757;
+    border-radius: 50%;
+    right: 0;
+}
+
+.container .right-section .top .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #EBF6FF;
+    width: 244px;
+    height: 60px;
+    border-radius: 16px;
+}
+
+.container .right-section .top .profile > i{
+    cursor: pointer;
+}
+
+.container .right-section .top .profile .left{
+    display: flex;
+    gap: 15px;
+}
+
+.container .right-section .top .profile .left img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container .right-section .top .profile .left .user h5{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container .right-section .top .profile .left .user a{
+    font-size: 12px;
+}
+
+.container .right-section .separator#first{
+    margin-top: 8px;
+}
+
+.container .right-section .separator h4{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.container .right-section .stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.container .right-section .stats .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 190px;
+    padding: 25px;
+    background: #EBF6FF;
+    border-radius: 20px;
+}
+
+.container .right-section .stats .item .top{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.container .right-section .stats .top p{
+    font-size: 16px;
+    color: #8EA3B7;
+    font-weight: 500;
+}
+
+.container .right-section .stats .item .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .right-section .stats .item .bottom .line{
+    width: 4px;
+    height: 30px;
+    background: #369FFF;
+    border-radius: 20px;
+}
+
+.container .right-section .stats .item .bottom h3{
+    font-size: 40px;
+    color: #006ED3;
+}
+
+.container .right-section .weekly{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    background: #F7F7F7;
+    border-radius: 16px;
+}
+
+.container .right-section .weekly .title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .right-section .weekly .title .line{
+    width: 6px;
+    height: 50px;
+    background: #006ED3;
+    border-radius: 20px;
+}
+
+.container .right-section .weekly h5{
+    font-size: 16px;
+}
+
+.container .right-section .weekly .progress-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, #F7F7F7 79%, transparent 80% 100%),
+    conic-gradient(#CCC 25%, #006ED3 0%);
+}
+
+.container .right-section .weekly .progress-bar::before{
+    content: "3/4";
+    font-size: 14px;
+    color: #000;
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        grid-template-columns: 1fr 6fr 5fr;
+    }
+    .container .left-section,
+    .container main,
+    .container .right-section{
+        padding: 20px 20px 0 20px;
+    }
+    .container .left-section .logo a,
+    .container .left-section .sidebar a,
+    .container .left-section .pic img,
+    .container .left-section .upgrade{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .container .left-section{
+        position: fixed;
+        height: 60vh;
+        background-color: #fff;
+        box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        top: -60vh;
+    }
+    .container .left-section .logo{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .container .left-section .logo .menu-btn,
+    main header .menu-btn{
+        display: flex;
+    }
+    main h5{
+        font-size: 16px;
+    }
+    main .separator .info{
+        gap: 15px;
+    }
+    main .separator .info h3,
+    .container .right-section .separator h4{
+        font-size: 20px;
+    }
+    main .analytics .item{
+        min-width: 160px;
+    }
+    main .analytics .item i{
+        display: none;
+    }
+    main .planning{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    main .planning .item{
+        padding: 8px;
+    }
+    .container .right-section .stats .item{
+        height: 160px;
+        padding: 20px;
+    }
+    .container .right-section .stats .item .top p{
+        font-size: 14px;
+    }
+    .container .right-section .stats .item .bottom h3{
+        font-size: 36px;
+    }
 }
