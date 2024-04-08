@@ -211,6 +211,19 @@ body.nav-active{overflow: hidden}
     object-fit: cover;
 }
 
+.section-subtitle{
+    font-size: var(--fs-7);
+    text-transform: uppercase;
+    color: var(--violet-blue-crayola);
+    font-weight: var(--fw-700);
+    margin-block-end: 16px;
+}
+
+.grid-list{
+    display: grid;
+    gap: 25px;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -430,8 +443,44 @@ body.nav-active{overflow: hidden}
   #SERVICE
 \*-----------------------------------*/
 
+.service{text-align: center}
 
+.service .section-title{margin-block-end: 50px}
 
+.service-card{
+    padding: 40px;
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-6);
+}
+
+.service-card .card-icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--violet-blue-crayola);
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    font-size: 2.5rem;
+    border-radius: var(--radius-circle);
+    margin-inline: auto;
+}
+
+.service-card .card-icon ion-icon{--ionicon-stroke-width: 50px}
+
+.service-card .card-title{margin-block: 16px 10px}
+
+.service-card .btn-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-block-start: 10px;
+    color: var(--violet-blue-crayola);
+    font-weight: var(--fw-700);
+    transition: var(--transition-1);
+}
+
+.service-card .btn-text:is(:hover, :focus-visible){opacity: 0.9}
 
 
 /*-----------------------------------*\
