@@ -536,8 +536,34 @@ body.nav-active{overflow: hidden}
   #FEATURES
 \*-----------------------------------*/
 
+.feature .container{
+    display: grid;
+    gap: 50px;
+}
 
+.feature .section-title{
+    margin-block: 25px 30px;
+}
 
+.feature-list{
+    display: grid;
+    gap: 15px;
+}
+
+.feature-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-card .card-icon{
+    background-color: var(--lavender-web);
+    font-size: 1.4rem;
+    padding: 4px;
+    border-radius: var(--radius-circle);
+}
+
+.feature-card .card-icon ion-icon{--ionicon-stroke-width: 40px}
 
 
 /*-----------------------------------*\
