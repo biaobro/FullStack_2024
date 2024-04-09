@@ -75,3 +75,23 @@ const initSlider = function(currentSlider){
 for (let i=0,len=sliders.length; i<len; i++){
     initSlider(sliders[i])
 }
+
+// ACCORDION
+const accordions = document.querySelectorAll("[data-accordion]")
+
+let lastActionAccordion = accordions[0]
+
+const initAccordion = function(currentAccordion){
+    const accordionBtn = currentAccordion.querySelector("[data-accordion-btn]")
+
+    const expandAccordion = function(){
+        if(lastActionAccordion && lastActionAccordion !== currentAccordion){
+            lastActionAccordion.classList.remove("expanded")
+        }
+        currentAccordion.classList.toggle("expanded")
+        lastActionAccordion = currentAccordion
+    }
+    accordionBtn.addEventListener("click", expandAccordion)
+}
+
+for(let i=0,len=accordions.length; i < len; i++){initAccordion(accordions[i])}

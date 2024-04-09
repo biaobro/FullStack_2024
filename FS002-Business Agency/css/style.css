@@ -224,6 +224,7 @@ body.nav-active{overflow: hidden}
     gap: 25px;
 }
 
+.w-100{width: 100%;}
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -487,6 +488,46 @@ body.nav-active{overflow: hidden}
   #ABOUT
 \*-----------------------------------*/
 
+.about{
+    display: grid;
+    gap: 50px;
+}
+
+.about .section-title{margin-block-end: 35px}
+
+.accordion-card .card-title{padding-block-end: 20px}
+
+.accordion-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion-btn ion-icon{
+    font-size: 1.5rem;
+    color: var(--black-coral);
+    transition: var(--transition-1);
+}
+
+.accordion-card.expanded .accordion-btn ion-icon{
+    transform: rotate(0.5turn);
+}
+
+.accordion-btn .span {transition: var(--transition-1)}
+
+.accordion-btn:is(:hover, :focus-visible) .span,
+.accordion-btn.expanded .accordion-btn .span{color: var(--violet-blue-crayola)}
+
+.accordion-content{
+    padding-inline-start: 24px;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion-card.expanded .accordion-content{
+    max-height: max-content;
+    padding-block-end: 20px;
+}
 
 
 
