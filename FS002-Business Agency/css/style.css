@@ -631,9 +631,23 @@ body.nav-active{overflow: hidden}
   #CTA
 \*-----------------------------------*/
 
+.cta{background-color: var(--charcoal)}
 
+.cta .container{
+    padding-block: 100px 60px;
+    border-block-end: 1px solid var(--cadet-blue-crayola_a20);
+}
 
+.cta .section-title{
+    color: var(--white);
+    margin-block-end: 30px;
+}
 
+.cta .btn{
+    background-color: var(--violet-blue-crayola);
+    color: var(--white);
+    border: none;
+}
 
 /*-----------------------------------*\
   #FOOTER
