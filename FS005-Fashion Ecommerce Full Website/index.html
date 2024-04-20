@@ -26,7 +26,50 @@
             </li>
         </ul>
     </header>
+
     <!-- Hero Banner Section -->
+    <div class="banner" id="banner">
+        <!--left part-->
+        <div class="women">
+            <img src="./images/women-1.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('left')">Women</a>
+            <div class="content">
+                <h1>Ladies' Fashion</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+
+        <!--middle part-->
+        <div class="men">
+            <img src="./images/men-1.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('middle')">Men</a>
+            <div class="content">
+                <h1>Men with Taste</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+
+        <!--right part-->
+        <div class="special">
+            <img src="./images/special-2.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('right')">Special</a>
+            <div class="content">
+                <h1>Be a cool girl</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                </p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+
+        <a href="#" class="reset" onclick="resetBanner()"><ion-icon name="power-outline"></ion-icon></a>
+    </div>
     <!-- Main Section -->
     <!-- Call Up Section -->
     <!-- About Section -->
@@ -38,5 +81,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
