@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary: #ff0051;
+    --second: #3a3a3a;
+    --third: #f2f2f2;
+}
+
+body{
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Section */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    background: transparent;
+    transition: 0.5s;
+    z-index: 1100;
+}
+
+.logo{
+    position: relative;
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.nav li a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.nav li a:hover{
+    color: var(--primary);
+}
+
+.util{
+    display: flex;
+    align-items: center;
+}
+
+.util li {
+    position: relative;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.util li a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.util li a ion-icon{
+    font-size: 1.6em;
+}
+
+.util li a:hover{
+    color: var(--primary);
+}
+
+.util li .number{
+    position: absolute;
+    right: -1px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+    font-weight: 400;
+}
