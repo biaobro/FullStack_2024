@@ -707,3 +707,81 @@ section.call-up{
     background: #ffffff;
     color: var(--primary);
 }
+
+/* Newsletter Signup Section */
+#newsletter{
+    position: relative;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    height: 120px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.12);
+    background: #ffffff;
+}
+
+.newsletter-box{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.newsletter-box ion-icon{
+    font-size: 3em;
+    color: var(--primary);
+}
+
+.newsletter-box h4{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#newsletter p{
+    width: 30%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+#newsletter .discount{
+    color: var(--primary);
+    font-size: 4em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#newsletter form{
+    width: 40%;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+#newsletter form input[type='text']{
+    outline: none;
+    border: 1px solid var(--third);
+    width: 400px;
+    padding: 10px 20px;
+}
+
+#newsletter form input[type='submit']{
+    outline: none;
+    border: 1px solid var(--primary);
+    padding: 10px 30px;
+    background: var(--primary);
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#newsletter form input[type='submit']:hover{
+    background: #ffffff;
+    color: var(--primary);
+}
