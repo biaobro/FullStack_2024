@@ -397,3 +397,133 @@ section.call-up{
     font-weight: 300;
 }
 
+/* About Section */
+.about{
+    padding: 100px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.about .left,
+.about .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.promotion,
+.discovery{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding: 50px;
+}
+
+.style,
+.collection{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding: 50px;
+}
+
+.about-box{
+    overflow: hidden;
+}
+
+.about-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+.about-box:hover img{
+    transform: scale(1.1);
+}
+
+/* A darker shade for the box */
+.about-box::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+/* Slightly brighter on hover */
+.about-box:hover::after{
+    background: rgba(0,0,0,0.2);
+}
+
+.about .description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 900;
+}
+
+.about .description h4{
+    position: relative;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about .description h4:after{
+    position: absolute;
+    content: '';
+    background: var(--primary);
+    bottom: -10px;
+    left: 0;
+    width: 70%;
+    height: 3px;
+}
+
+.about .description p{
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.about a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.5s;
+}
+
+.about a:hover{
+    gap: 10px;
+    color: var(--primary);
+}
