@@ -45,3 +45,11 @@ if (selectHeader){
 function scrollToTop(){
     window.scrollTo(0,0)
 }
+
+// toggle menu on mobile view
+function toggleMenu(){
+    const menu = document.querySelector('.menu')
+    const navMobile = document.querySelector('.nav-mobile')
+    menu.classList.toggle('active')
+    navMobile.classList.toggle('active')
+}

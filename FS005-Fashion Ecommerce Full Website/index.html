@@ -25,7 +25,20 @@
                 <span class="number">8</span>
             </li>
         </ul>
+
+        <!-- Add a menu icon on mobile view -->
+        <a href="#" class="menu" onclick="toggleMenu()">
+            <ion-icon name="apps-outline"></ion-icon>
+        </a>
     </header>
+
+    <!-- Mobile View navigation -->
+    <ul class="nav-mobile">
+        <li><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
+        <li><a href="#about" onclick="toggleMenu()">about</a></li>
+        <li><a href="#products" onclick="toggleMenu()">shopping</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">contact us</a></li>
+    </ul>
 
     <!-- Hero Banner Section -->
     <div class="banner" id="banner">

@@ -117,6 +117,62 @@ header.header-scrolled{
     font-weight: 400;
 }
 
+/* Mobile menu and navigation */
+.menu{
+    display: none;
+    transition: 0.5s;
+}
+
+.menu ion-icon{
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+.menu .active{
+    transform: rotateZ(45deg);
+}
+
+.nav-mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 990;
+    gap: 20px;
+}
+
+.nav-mobile.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-mobile li{
+    position: relative;
+    list-style: none;
+}
+
+.nav-mobile li a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 300;
+    padding: 10px;
+}
+
+
 /* Banner Section */
 #banner{
     position: relative;
@@ -1043,4 +1099,220 @@ footer{
 .back-to-top.active{
     visibility: visible;
     opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header{
+        padding: 30px 20px;
+    }
+
+    header.header-scrolled{
+        padding: 15px 20px;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: blur(20px);
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .util{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    #banner{
+        padding: 0 20px;
+    }
+
+    .women{
+        height: 40%;
+        width: 100%;
+        clip-path: polygon(0% 0,100% 0%,100% 75%,50% 100%,0 75%);
+    }
+
+    .men{
+        top: 30%;
+        left: 0;
+        height: 40%;
+        width: 100%;
+        clip-path: polygon(100% 0,100% 100%,50% 75%,0 100%,0 0, 50% 25%);
+    }
+
+    .special{
+        top: 60%;
+        left: 0;
+        height: 40%;
+        width: 100%;
+        clip-path: polygon(50% 0,100% 25%,100% 100%,0 100%,0 25%);
+    }
+
+    #banner.left .women,
+    #banner.middle .men,
+    #banner.right .special{
+        height: 100%;
+    }
+
+    #banner.right .special{
+        top: 0;
+    }
+
+    #banner.middle .men{
+        top: 0;
+    }
+
+    #banner.left .men,
+    #banner.left .special{
+        top: 120%;
+    }
+
+    #banner.right .men,
+    #banner.right .women{
+        top: -120%;
+    }
+
+    #banner.middle .women{
+        top: -120%;
+    }
+
+    #banner.middle .special{
+        top: 120%;
+    }
+
+    .switch-btn{
+        font-size: 4em;
+        margin-top: 0;
+    }
+
+    #banner.left .women img{
+        height: 50%;
+        width: 100% !important;
+    }
+
+    #banner.middle .men img,
+    #banner.right .special img{
+        left: 0;
+        top: 50%;
+        height: 50%;
+        width: 100% !important;
+    }
+
+    #banner .content h1{
+        font-size: 2.5em;
+        font-weight: 400;
+    }
+
+    .women .content{
+        left: 20px;
+        top: 60%;
+    }
+
+    .men .content,
+    .special .content{
+        left: 20px;
+        top: 15%;
+    }
+
+    .reset{
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .reset ion-icon{
+        font-size: 2em;
+    }
+
+    /* call up section */
+    section.call-up{
+        padding: 0 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    /* about section */
+    .about{
+        padding: 100px 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .about .left,
+    .about .right,
+    .promotion,
+    .discovery{
+        width: 100%;
+    }
+
+    /* product section */
+    #products{
+        padding: 100px 10px 50px;
+        gap: 50px;
+    }
+
+    #product-filters{
+        gap: 25px;
+    }
+
+    .product-container{
+        flex-wrap: wrap;
+    }
+
+    .product-item{
+        width: 100%;
+    }
+
+    /* newsletter section */
+    #newsletter{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .newsletter-box{
+        width: 100%;
+    }
+
+    #newsletter p{
+        width: 100%;
+    }
+
+    #newsletter form{
+        width: 100%;
+    }
+
+    #newsletter form input[type='text']{
+        width: 250px;
+    }
+
+    /* contact section */
+    #contact{
+        padding: 50px 0 0;
+    }
+
+    .contact .info-wrap{
+        flex-wrap: wrap;
+        width: 90%;
+        gap: 30px;
+    }
+
+    .contact .contact-form{
+        width: 90%;
+    }
+
+    /* footer */
+    footer{
+        padding: 20px;
+    }
+
+    .footer-nav{
+        display: none;
+    }
 }
