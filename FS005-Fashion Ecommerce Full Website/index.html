@@ -163,15 +163,281 @@
         </section>
 
         <!-- Products Section -->
+        <section class="products" id="products">
+            <!-- products filter -->
+            <ul id="product-filters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-women">Women</li>
+                <li data-filter=".filter-men">Men</li>
+                <li data-filter=".filter-special">Special</li>
+            </ul>
+            
+            <div class="product-container">
+                <!-- Product item -->
+                <!-- this one item is for demo purpose, you could duplicate as many as you want -->
+                <!-- in reality, data will be mapped into the product item card -->
+                <div class="product-item filter-women">
+                    <span class="hot">Hot</span>
+                    <img src="./images/shoes-1.png" alt="">
+                    <div class="product-info">
+                        <!-- Rating of 5 stars-->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <!-- duplicate all remaining item cards here -->
+                <!-- make sure give your item the filter name accordingly -->
+                <div class="product-item filter-women">
+                    <span class="hot">Hot</span>
+                    <img src="./images/cloth-1.png" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$480.59</span>
+                            <span class="price">$375.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-women">
+                    <img src="./images/women-3.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-men">
+                    <img src="./images/shoes-2.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-men">
+                    <img src="./images/shoes-3.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-special">
+                    <span class="hot">Hot</span>
+                    <img src="./images/sunglasses-3.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="price">$78.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-women">
+                    <span class="hot">Hot</span>
+                    <img src="./images/cloth-2.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-women">
+                    <img src="./images/cloth-3.jpeg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-special">
+                    <span class="hot">Hot</span>
+                    <img src="./images/special-1.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating of 5 stars-->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-special">
+                    <span class="hot">Hot</span>
+                    <img src="./images/special-4.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating of 5 stars-->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="cross">$180.59</span>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-men">
+                    <img src="./images/men-2.jpg" alt="">
+                    <div class="product-info">
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+                <div class="product-item filter-women">
+                    <img src="./images/women-2.jpeg" alt="">
+                    <div class="product-info">
+                        <!-- Rating of 5 stars-->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                            <li><ion-icon name="star-outline"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>
+                            <span class="price">$125.99</span>
+                        </p>
+                    </div>
+                    <a href="#" class="add-to-bag">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="loading-more">
+                <a href="#">explore more <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+        </section>
+
         <!-- Newsletter Signup Section -->
         <!-- Contact Section -->
         <!-- Footer Section -->
         <!-- Back to Top Button -->
     </main>
 
-
+    <!-- Attention: the order of JS script is very important, they are not random -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="./js/isotope.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
