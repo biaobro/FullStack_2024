@@ -4,6 +4,7 @@ import bgImg from '../images/bg-transformer.jpg'
 import MovieContent from "../components/MovieContent";
 import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
+import MovieSwiper from "../components/MovieSwiper";
 
 function Banner(props) {
     const [movies, setMovies] = useState([])
@@ -21,6 +22,12 @@ function Banner(props) {
         fetchData()
     },[])
 
+
+    const handleSlideChange = id => {
+        console.log(id)
+    }
+
+
     return (
         <div className="banner">
             <div className="movie">
@@ -37,6 +44,10 @@ function Banner(props) {
                     </div>
                 </div>
             </div>
+
+            {
+                movies && movies.length>0 && <MovieSwiper slides={movies} slideChange={handleSlideChange}/>
+            }
         </div>
     );
 }
