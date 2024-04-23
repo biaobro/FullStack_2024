@@ -1,11 +1,12 @@
 import React from 'react';
 import './movieContent.css'
 import Button from "./Button";
+import titleImg from '../images/transformer-title.png'
 
 function MovieContent(props) {
     return (
         <div className="content active">
-            <img src="" alt="Movie Title" className="movie-title"/>
+            <img src={titleImg} alt="Movie Title" className="movie-title"/>
             <h4>
                 <span>Year</span>
                 <span><i>age</i></span>
@@ -26,8 +27,8 @@ function MovieContent(props) {
                     bgColor='#FFFFFF'
                 />
                 <Button
-                    ion={<ion-icon name="add-outline"></ion-icon>}
-                    name="My List"
+                    icon={<ion-icon name="add-outline"></ion-icon>}
+                    name='My List'
                 />
             </div>
         </div>
