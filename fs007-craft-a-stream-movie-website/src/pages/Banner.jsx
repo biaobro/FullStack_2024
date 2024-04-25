@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './banner.css';
-import bgImg from '../images/bg-transformer.jpg'
 import MovieContent from "../components/MovieContent";
 import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
@@ -24,29 +23,40 @@ function Banner(props) {
 
 
     const handleSlideChange = id => {
-        console.log(id)
+        const newMovies = movies.map(movie=>{
+            movie.active = movie._id === id;
+            return movie
+        })
+        setMovies(newMovies)
     }
 
 
     return (
         <div className="banner">
-            <div className="movie">
-                <img src={bgImg} alt="Background Image" className="bgImg active"/>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-lg-6 col-md-12">
-                            <MovieContent />
-                        </div>
-                        <div className="col-lg-6 col-md-12">
-                            <MovieDate />
-                            <PlayBtn />
+            {
+                // eslint-disable-next-line array-callback-return
+                movies && movies.length > 0 && movies.map(movie => (
+                    <div className="movie">
+                        <img src={movie.bgImg} alt="Background Image" className={`bgImg ${movie.active ? 'active' : undefined}`}/>
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-lg-6 col-md-12">
+                                    <MovieContent movie={movie}/>
+                                </div>
+                                <div className="col-lg-6 col-md-12">
+                                    <MovieDate movie={movie}/>
+                                    <PlayBtn movie={movie}/>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                )
+                )
+            }
+
 
             {
-                movies && movies.length>0 && <MovieSwiper slides={movies} slideChange={handleSlideChange}/>
+                movies && movies.length > 0 && <MovieSwiper slides={movies} slideChange={handleSlideChange}/>
             }
         </div>
     );
