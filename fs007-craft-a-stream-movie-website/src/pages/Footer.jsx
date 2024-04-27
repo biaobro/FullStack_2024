@@ -70,13 +70,14 @@ function Footer(props) {
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-12 footer-contract text-center text-md-start">
+                        <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                             <h4>Contact Us</h4>
                             <p>
                                 Street Name <br/>
                                 City Name, State 123456
                                 <br />
                                 Australia <br />
+                                <br/>
                                 <strong>Phone:</strong> +1 2345 6789 00
                                 <br/>
                                 <strong>Email:</strong> info@example.com
