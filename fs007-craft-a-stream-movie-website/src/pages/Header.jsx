@@ -5,9 +5,9 @@ import navListData  from "../data/navListData";
 import Search from "../components/Search";
 import Button from "../components/Button";
 
-function Header(props) {
+function Header({scroll}) {
     return (
-        <header>
+        <header className={`${scroll > 100 ? 'scrolled' : undefined}`}>
             <a href="/" className="logo">Cinema</a>
             <ul className="nav">
                 {
