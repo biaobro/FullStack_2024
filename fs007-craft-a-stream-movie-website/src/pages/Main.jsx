@@ -3,6 +3,7 @@ import "./main.css"
 import Schedule from "./Schedule";
 import Trend from "./Trend";
 import Blog from "./Blog";
+import Footer from "./Footer";
 
 function Main(props) {
     return (
@@ -10,6 +11,7 @@ function Main(props) {
             <Schedule />
             <Trend />
             <Blog />
+            <Footer />
         </main>
     );
 }
