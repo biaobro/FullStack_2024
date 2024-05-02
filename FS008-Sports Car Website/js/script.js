@@ -33,3 +33,29 @@ function changeVideo(name){
         }
     })
 }
+
+// switch the play and pause button on click
+function togglePlay(){
+    const play = document.querySelector('.play')
+    const pause = document.querySelector('.pause')
+    play.classList.toggle('active')
+    pause.classList.toggle('active')
+}
+
+// video play and pause button
+function pauseVideo(){
+    const bgVideoList = document.querySelectorAll('.bg-video')
+    bgVideoList.forEach(video => {
+        video.pause()
+    })
+    togglePlay()
+}
+
+function playVideo(){
+    const bgVideoList = document.querySelectorAll('.bg-video')
+    bgVideoList.forEach(video => {
+        video.play()
+    })
+    togglePlay()
+}
+
