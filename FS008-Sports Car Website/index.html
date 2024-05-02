@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>McLEARN | Sports Car Website Landing Page</title>
 </head>
@@ -150,7 +151,40 @@
                 </span>
             </div>
         </div>
+
+        <div class="gallery">
+            <div class="carousel">
+                <a class="carousel-item" href="#">
+                    <img src="./images/cars/mclaren-1.jpg" alt="">
+                    <h4>765LT SPIDER</h4>
+                </a>
+                <a class="carousel-item" href="#">
+                    <img src="./images/cars/mclaren-2.jpg" alt="">
+                    <h4 style="color: #92ff00">ARTURA</h4>
+                </a>
+                <a class="carousel-item" href="#">
+                    <img src="./images/cars/mclaren-3.jpeg" alt="">
+                    <h4 style="color: #ff0015">750S</h4>
+                </a>
+                <a class="carousel-item" href="#">
+                    <img src="./images/cars/mclaren-4.jpeg" alt="">
+                    <h4 style="color: #ff2e00">765LT</h4>
+                </a>
+                <a class="carousel-item" href="#">
+                    <img src="./images/cars/mclaren-5.jpeg" alt="">
+                    <h4 style="color: #bbc0dd">750S SPIDER</h4>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
+    </script>
 </body>
 </html>
