@@ -142,5 +142,44 @@ header .menu.active{
 
 .nav li a:hover{
     box-shadow: inset 0 0 20px rgba(0, 194, 222, 0.5);
+}
 
+/* Banner */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.3),
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.9));
+}
+
+.banner::before{
+    position: absolute;
+    content: '';
+    top: 25%;
+    left: 0;
+    width: 5px;
+    height: 40%;
+    background: linear-gradient(var(--primary),var(--primary), transparent);
+    z-index: 100;
 }
