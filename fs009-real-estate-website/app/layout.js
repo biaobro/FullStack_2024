@@ -9,6 +9,7 @@ import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/app/components/Nav";
+import SearchForm from "@/app/components/SearchForm";
 
 const poppins = Poppins({
   subsets: ["latin"] ,
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
     <body className={poppins.className}>
+      <SearchForm />
       <Nav />
       {children}
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
