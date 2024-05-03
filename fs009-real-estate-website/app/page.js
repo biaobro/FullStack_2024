@@ -1,6 +1,14 @@
 
 export default function Home() {
   return (
-      <h1>Hello World</h1>
+      <>
+        {/*  Hero Section */}
+        <main id="main">
+          {/*  services Section */}
+          {/*  properties Section */}
+          {/*  agents Section */}
+          {/*  testimonials Section */}
+        </main>
+      </>
   );
 }
