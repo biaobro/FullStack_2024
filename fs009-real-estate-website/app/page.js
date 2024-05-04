@@ -1,4 +1,5 @@
 import Hero from "@/app/components/Hero";
+import Services from "@/app/components/Services";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
           <Hero />
           <main id="main">
               {/*  services Section */}
+              <Services/>
               {/*  properties Section */}
               {/*  agents Section */}
               {/*  testimonials Section */}
