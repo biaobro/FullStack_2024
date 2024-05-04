@@ -1,10 +1,6 @@
 // import icons
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-// move the customized css before bootstrap to solve css conflict
-// make sure the customized could overlap 3rd css
-import "./globals.css";
-
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -15,6 +11,9 @@ import { Poppins } from "next/font/google";
 import Nav from "@/app/components/Nav";
 import SearchForm from "@/app/components/SearchForm";
 import Footer from "@/app/components/Footer";
+
+// make sure the customized stay at end so that could overlap 3rd css
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"] ,
