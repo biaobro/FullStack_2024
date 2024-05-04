@@ -171,7 +171,7 @@ function Footer(props) {
                             <div className="copyright-footer">
                                 <p className="copyright color-text-a">
                                     &copy; Copyright
-                                    <span className="color-a">EstateAgency</span> All Rights
+                                    <span className="color-a"> EstateAgency</span> All Rights
                                     Reserved.
                                 </p>
                             </div>
