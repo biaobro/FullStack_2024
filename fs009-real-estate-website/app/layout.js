@@ -1,13 +1,17 @@
 // import icons
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
+// move the customized css before bootstrap to solve css conflict
+// make sure the customized could overlap 3rd css
+import "./globals.css";
+
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 
 import Script from "next/script";
 
 import { Poppins } from "next/font/google";
-import "./globals.css";
+
 import Nav from "@/app/components/Nav";
 import SearchForm from "@/app/components/SearchForm";
 
