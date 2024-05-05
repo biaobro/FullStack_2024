@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
+import axios from "axios";
+import {Link, useNavigate} from "react-router-dom";
 
 function AddUser(props) {
+    let navigate = useNavigate()
+
     const [user, setUser] = useState({
         name:"",
         username:"",
@@ -13,36 +17,49 @@ function AddUser(props) {
         setUser({...user, [e.target.name]:e.target.value})
     }
 
+    const onClickSubmit = async (e)=>{
+        // prevent the info showing on browser address
+        e.preventDefault();
+
+        await axios.post("http://localhost:8080/user", user);
+
+        navigate("/");
+    }
+
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
                     <h2 className="text-center m-4">Register User</h2>
-                    <div className="mb-3">
-                        <label htmlFor="Name" className="form-label">
-                            Name
-                        </label>
-                        <input type="text" className="form-control" placeholder="Enter your name" name="name" value={name} onChange={(e)=>onInputChange(e)}/>
-                    </div>
+                    <form action="" onSubmit={(e)=>onClickSubmit(e)}>
+                        <div className="mb-3">
+                            <label htmlFor="Name" className="form-label">
+                                Name
+                            </label>
+                            <input type="text" className="form-control" placeholder="Enter your name" name="name"
+                                   value={name} onChange={(e) => onInputChange(e)}/>
+                        </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="Username" className="form-label">
-                            Username
-                        </label>
-                        <input type="text" className="form-control" placeholder="Enter your Username" name="username" value={username} onChange={(e)=>onInputChange(e)}/>
-                    </div>
+                        <div className="mb-3">
+                            <label htmlFor="Username" className="form-label">
+                                Username
+                            </label>
+                            <input type="text" className="form-control" placeholder="Enter your Username"
+                                   name="username" value={username} onChange={(e) => onInputChange(e)}/>
+                        </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="Email" className="form-label">
-                            Email
-                        </label>
-                        <input type="text" className="form-control" placeholder="Enter your Email" name="email" value={email} onChange={(e)=>onInputChange(e)}/>
-                    </div>
+                        <div className="mb-3">
+                            <label htmlFor="Email" className="form-label">
+                                Email
+                            </label>
+                            <input type="text" className="form-control" placeholder="Enter your Email" name="email"
+                                   value={email} onChange={(e) => onInputChange(e)}/>
+                        </div>
 
-                    <button className="btn btn-outline-primary" type="submit">Submit</button>
-                    <button className="btn btn-outline-danger mx-2" type="submit">Cancel</button>
+                        <button className="btn btn-outline-primary" type="submit">Submit</button>
+                        <Link className="btn btn-outline-danger mx-2" to="/">Cancel</Link>
 
-
+                    </form>
                 </div>
             </div>
         </div>
