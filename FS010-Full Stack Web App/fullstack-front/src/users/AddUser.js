@@ -1,6 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function AddUser(props) {
+    const [user, setUser] = useState({
+        name:"",
+        username:"",
+        email:""
+    })
+
+    const {name, username, email} = user
+
+    const onInputChange = (e) => {
+        setUser({...user, [e.target.name]:e.target.value})
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -10,21 +22,21 @@ function AddUser(props) {
                         <label htmlFor="Name" className="form-label">
                             Name
                         </label>
-                        <input type="text" className="form-control" placeholder="Enter your name" name="name"/>
+                        <input type="text" className="form-control" placeholder="Enter your name" name="name" value={name} onChange={(e)=>onInputChange(e)}/>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="Username" className="form-label">
                             Username
                         </label>
-                        <input type="text" className="form-control" placeholder="Enter your Username" name="username"/>
+                        <input type="text" className="form-control" placeholder="Enter your Username" name="username" value={username} onChange={(e)=>onInputChange(e)}/>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="Email" className="form-label">
                             Email
                         </label>
-                        <input type="text" className="form-control" placeholder="Enter your Email" name="email"/>
+                        <input type="text" className="form-control" placeholder="Enter your Email" name="email" value={email} onChange={(e)=>onInputChange(e)}/>
                     </div>
 
                     <button className="btn btn-outline-primary" type="submit">Submit</button>
