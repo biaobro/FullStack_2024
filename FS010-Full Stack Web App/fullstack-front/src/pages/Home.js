@@ -1,6 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
 
 function Home(props) {
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        loadUsers();
+    }, [])
+
+    const loadUsers = async () => {
+        const res = await axios.get("http://localhost:8080/users")
+        // 1st make sure data output normally in console
+        // console.log(res.data)
+
+        // 2nd put the data into Users
+        setUsers(res.data)
+    }
     return (
         <div className="container">
             <div className="py-4">
@@ -8,29 +23,23 @@ function Home(props) {
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        users.map((user, index) => (
+                            <tr>
+                                <th scope="row" key={index}>{index+1}</th>
+                                <td>{user.name}</td>
+                                <td>{user.username}</td>
+                                <td>{user.email}</td>
+                            </tr>
+                        ))
+                    }
                     </tbody>
                 </table>
             </div>
