@@ -16,7 +16,7 @@ class ProductService{
     }
 
     deleteProduct(id){
-        return axios.get(API_URL+"/deleteProduct"+id)
+        return axios.get(API_URL+"/deleteProduct/"+id)
     }
 
     editProduct(product){
