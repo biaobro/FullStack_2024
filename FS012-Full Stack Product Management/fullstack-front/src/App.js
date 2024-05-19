@@ -1,8 +1,21 @@
 import './App.css';
+import Navbar from "./component/Navbar";
+import {Route, Routes} from "react-router-dom";
+import Home from "./component/Home";
+import AddProduct from "./component/AddProduct";
+import EditProduct from "./component/EditProduct";
 
 function App() {
   return (
-    <h1>Hello World</h1>
+      <>
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/addProduct/" element={<AddProduct />}></Route>
+            <Route path="/editProduct/" element={<EditProduct />}></Route>
+            <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </>
   );
 }
 
