@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "6664802433554121b304180b"
+  },
+  "id": 22,
+  "name": "produt 123",
+  "image": "http://localhost:4000/images/product_1717861344046.png",
+  "category": "kids",
+  "new_price": 45,
+  "old_price": 34,
+  "available": true,
+  "date": {
+    "$date": "2024-06-08T16:00:36.045Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666481b5d9b6a0f1bc2ee8a6"
+  },
+  "id": 23,
+  "name": "produt 123",
+  "image": "http://localhost:4000/images/product_1717861344046.png",
+  "category": "kids",
+  "new_price": 45,
+  "old_price": 34,
+  "available": true,
+  "date": {
+    "$date": "2024-06-08T16:07:17.008Z"
+  },
+  "__v": 0
+}]

@@ -23,7 +23,9 @@ app.get("/",(req, res)=>{
 const storage = multer.diskStorage({
     destination:'./upload/images',
     filename:(req,file,cb)=>{
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+        // fieldname 表单指定的key
+        // originalname	文件原名
+        return cb(null,`${path.basename(file.originalname,'.png')}_${Date.now()}${path.extname(file.originalname)}`)
     }
 })
 
