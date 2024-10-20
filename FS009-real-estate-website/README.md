@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Don't know why the interactive way doesn't work. So create the project with non-interactive command: 
 ```bash
-npx create-next-app@latest fs009-real-estate-website --js --no-tailwind --no-import-alias
+npx create-next-app@latest FS009-real-estate-website --js --no-tailwind --no-import-alias
 ```
 
 ## Getting Started
