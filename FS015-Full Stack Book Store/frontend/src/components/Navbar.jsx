@@ -9,7 +9,7 @@ import avatarImg from "../assets/avatar.png"
 
 const navigation = [
     {name : "Dashboard", href:"/dashboard"},
-    {name : "Orders", href:"/order"},
+    {name : "Orders", href:"/orders"},
     {name : "Cart Page", href:"/cart"},
     {name : "Check Out", href:"/checkout"},
 ]
