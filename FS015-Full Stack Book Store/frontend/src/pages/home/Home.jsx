@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import Banner from "./Banner.jsx";
 import TopSellers from "./TopSellers.jsx";
 import Recommended from "./Recommended.jsx";
