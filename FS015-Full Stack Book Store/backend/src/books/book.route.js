@@ -1,24 +1,23 @@
 const express = require('express');
 const Book = require("./book.model");
+const {postSingleBook, getAllBooks, getSingleBook, updateSingleBook, deleteSingleBook} = require("./book.controller");
 const router = express.Router()
 
+// fronted => backend server => controller => book schema => database => send to server => back to fronted
 // post a book
 // post = when submit something fronted to db
 // get = get something back from db
 // put = update
 // delete = delete
 
+router.post('/create-book', postSingleBook)
 
-router.post('/create-book', async (req, res) => {
-    console.log(req.body)
-    try{
-        const newBook = await Book({...req.body});
-        await newBook.save();
-        res.status(200).send({message:"Book posted successfully!", book:newBook})
-    }catch (err){
-        console.log('Error when creating book', err);
-        res.status(500).send({message:"Book posted failed!"})
-    }
-})
+router.get('/', getAllBooks)
+
+router.get('/:id', getSingleBook)
+
+router.put('/edit-book/:id', updateSingleBook)
+
+router.delete('/delete-book/:id', deleteSingleBook)
 
 module.exports = router
